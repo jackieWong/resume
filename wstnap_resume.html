@@ -26,15 +26,25 @@ body {
 table {
 	margin: 10px 0 15px 0;
 	border-collapse: collapse;
+	width: 100%
 }
 td,th {	
 	border: 1px solid #ddd;
-	padding: 3px 10px;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 5px 5px;
 }
 th {
-	padding: 5px 10px;	
+	text-align: left;
+	padding: 5px 5px;	
 }
-
+#bi {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+#bi td {
+	border: 0px;
+}
 a {
     color: #0069d6;
 }
@@ -52,14 +62,15 @@ h4,
 h5,
 h6 {
     color: #404040;
-    line-height: 36px;
+	font-weight: bold;
+    line-height: 18px;
 }
 h1 {
     margin-bottom: 4px;
     font-size: 20px;
 }
 h2 {
-    font-size: 18px;
+    font-size: 16px;
 }
 h3 {
     font-size: 18px;
@@ -150,103 +161,146 @@ sup {
 }
 ul {
 	margin-top: 0px;
+	margin-bottom: 0px;
 }
 </style>
 </head>
 <body>
-<h1>个人简历</h1>
-
 <h2>基本信息</h2>
-
-<p>王盛 男 24岁 研究生</p>
-
-<p>手机: 15122208065</p>
-
-<p>邮箱: wstnap@gmail.com</p>
-
-<p>github: <a href="http://github.com/JackieWong">http://github.com/JackieWong</a></p>
-
-<p>blog: <a href="http://www.wstnap.com">http://www.wstnap.com</a></p>
+<table id="bi">
+	<colgroup>
+		<col style="width: 50px;" />
+		<col style="width: 690px;" />
+		<col />
+	</colgroup>
+	<tr>
+		<td><b>王盛</b></td>
+		<td>男 24岁 研究生在读</td>
+		<td rowspan="5">
+			<img src="13523.png" style="width: 100px;"/>
+		</td>
+	</tr>
+	<tr>
+		<td><b>手机</b></td>
+		<td>15122208065</td>
+	</tr>
+	<tr>
+		<td><b>邮箱</b></td>
+		<td>wstnap@gmail.com</td>
+	</tr>
+	<tr>
+		<td><b>GitHub</b></td>
+		<td><a href="http://github.com/JackieWong">http://github.com/JackieWong</a></td>
+	</tr>
+	<tr>
+		<td><b>Blog</b></td>
+		<td><a href="http://www.wstnap.com">http://www.wstnap.com</a></td>
+	</tr>
+</table>
 
 <h2>相关技能</h2>
-
-<ul>
-<li>语言：C＋＋,Javascript,MySQL,PHP,Java</li>
-<li><p>环境：</p>
-
-<ul>
-<li>长期使用ubuntu, gentoo</li>
-<li>熟练掌握gcc,make,git,vim,bash,</li>
-<li>自行配置vpn server,hotspot,iptables,web server,mysql等服务器，</li>
-</ul>
-</li>
-<li>其他：熟悉smali，Android app逆向</li>
-<li>英语：CET6</li>
-</ul>
+<table>
+	<colgroup>
+		<col style="width: 260px;">
+		<col />
+	</colgroup>
+	<tr>
+		<th>语言</th>
+		<td>C＋＋,Javascript,MySQL,PHP,Java</td>
+	</tr>
+	<tr>
+		<th>环境</th>
+		<td>
+			<li>长期使用ubuntu, gentoo</li>
+			<li>熟练掌握gcc,make,git,vim,bash,</li>
+			<li>自行配置vpn server,hotspot,iptables,web server,mysql等服务器</li>
+		</td>
+	</tr>
+	<tr>
+		<th>其他</th>
+		<td>熟悉smali，Android app逆向</td>
+	</tr>
+	<tr>
+		<th>英语</th>
+		<td>CET6</td>
+	</tr>
+</table>
 
 
 <h2>项目经历</h2>
-<hr>
 <table>
+	<colgroup>
+		<col style="width: 180px; text-align: center;" />
+		<col style="width: 80px; text-align: center;" />
+		<col />
+	</colgroup>
 	<tr>
-		<td></td>
+		<td><b>2012年9月 － 2013年3月</b></td>
+		<td><b>负责人</b></td>
+		<td>
+			<p><strong>PDroid与Android安全研究</strong></p>
+			<ul>
+			<li>研究Android App权限与之产生的隐私问题，利用PDroid保护设备信息</li>
+			<li>编写基于ADB, DDMS, MonkeyRunner测试脚本，测试并修复Android 2.3, Android 4.0.4版本中MonkeyRunner的相关bug.</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><b>2013年4月 － Present</b></td>
+		<td><b>负责人</b></td>
+		<td>
+			<p><strong>Android逆向与hybrid结构安全性检测</strong></p>
+			<ul>
+			<li>研究基于hybrid结构的Android应用，及其存在的安全隐患</li>
+			<li>逆向Android市场上常见的hybrid游戏，研读smali代码，还原Java代码及程序执行流程</li>
+			<li>针对hybrid存在的问题和应用固有漏洞，对相关厂商给出建议，完善APP体验</li>
+			<li>定制smali代码，增强应用功能</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><b>2013年12月 － 2014年6月</b></td>
+		<td><b>编纂者</b></td>
+		<td>
+			<p><strong>参与编写《计算机网络实验手册》（出版名待定）</strong></p>
+			<ul>
+			<li>负责实现简化版的基于openssl的web server</li>
+			<li>实现常见的对称加密算法</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><b>2014年5月 － Present</b></td>
+		<td><b>实习生</b></td>
+		<td>
+			<p><strong>Knowledge Lake公司实习</strong></p>
+			<ul>
+			<li>  基于Abbyy的图像增强与文字识别PowerShell客户端重构</li>
+			<li>  S2MSP(Scan to Microsoft SharePoint)测试与维护</li>
+			</ul>
+		</td>
 	</tr>
 </table>
-<ul>
-<li><p><strong>PDroid 与 Android 安全研究</strong></p>
-
-<p>负责人,2012年9月 － 2013年3月</p>
-
-<ul>
-<li>研究Android App权限与之产生的隐私问题，利用Pdroid保护设备信息</li>
-<li>编写基于 ADB,DDMS,MonkeyRunner测试脚本，测试并修复android 2.3, android 4.0.4版本中MonkeyRunner的相关bug.</li>
-</ul>
-</li>
-<li><p><strong>Android逆向 与 hybrid 结构安全性检测</strong></p>
-
-<p>负责人, 2013年4月 - 今</p>
-
-<ul>
-<li>研究基于hybrid结构的Android应用，及其存在的安全隐患</li>
-<li>逆向Android市场上常见的hybrid游戏，研读smali代码，还原java代码及程序执行流程</li>
-<li>针对hybrid存在的问题和应用固有漏洞，对相关厂商给出建议，完善APP体验</li>
-<li>定制smali代码，增强应用功能</li>
-</ul>
-</li>
-<li><p><strong>参与编写《计算机网络实验手册》（出版名待定）</strong></p>
-
-<p>  编纂者，2013年12月 — 2014年6月</p>
-
-<ul>
-<li>负责实现简化版的基于openssl的web server</li>
-<li>实现常见的对称加密算法</li>
-</ul>
-</li>
-<li><p><strong>Knowledge Lake公司实习</strong></p>
-
-<p>  实习生，2014年5月 — 今</p>
-
-<ul>
-<li>  基于Abbyy的图像增强与文字识别 Power shell 客户端重构</li>
-<li>  S2MSP(Scan to Microsoft SharePoint)测试与维护</li>
-</ul>
-</li>
-</ul>
-
 
 <h2>教育经历</h2>
-
-<ul>
-<li><p>2008 － 2012 南开大学 本科</p></li>
-<li><p>2013 － now 南开大学 研究生</p></li>
-</ul>
-
+<table>
+	<colgroup>
+		<col style="width: 260px; text-align: center;" />
+		<col />
+	</colgroup>
+	<tr>
+		<td>2008 － 2012</td>
+		<td>南开大学 本科</td>
+	</tr>
+	<tr>
+		<td>2013 － now</td>
+		<td>南开大学 研究生</td>
+	</tr>
+</table>
 
 <h2>兴趣爱好</h2>
 
-<ul>
-<li>电子游戏 电影 健身 旅游</li>
-</ul>
+<div style="margin-top: 8px; margin-left: 5px;">电子游戏 电影 健身 旅游</div>
 
 </body>
 </html>
